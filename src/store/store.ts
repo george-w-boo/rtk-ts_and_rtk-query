@@ -1,10 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterSlice from "./slices/counterSlice";
-// ...
+import photoSlice from "./slices/photoSlice";
 
 export const store = configureStore({
   reducer: {
-    photosStore: counterSlice,
+    photosStore: photoSlice,
   },
   devTools: process.env.NODE_ENV !== "development" ? false : true,
 });
