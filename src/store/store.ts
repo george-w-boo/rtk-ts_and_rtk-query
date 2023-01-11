@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import counterSlice from "./slices/counterSlice";
 // ...
 
 export const store = configureStore({
   reducer: {
-    count: countReducer,
+    photosStore: counterSlice,
   },
+  devTools: process.env.NODE_ENV !== "development" ? false : true,
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
